@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #2980b9;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #f8f9fa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.institution-header {
+  background-color: var(--primary-color);
   color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+.logo{
+  width: 100px;  
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  padding-right: 540px;
+}
+
+.header-text p {
+  font-size: 1.1rem;
+  color: var(--light-color);
+}
+.login-section {
+  display: flex;
+  gap: 0.75rem;       /* space between buttons */
+  align-items: center;
+  /* if you want them right-aligned: */
+  /* justify-content: flex-end; */
+}
+
+.login-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+.profile-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #3498db;
+}
+
+.main-nav {
+  background-color: var(--secondary-color);
+  padding: 1rem 5%;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-nav a:hover {
+  color: var(--light-color);
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  padding: 2rem 5%;
+  min-height: 70vh;
+}
+
+.announcements {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.announcement-card {
+  background-color: var(--light-color);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.date-badge {
+  display: inline-block;
+  background-color: #95a5a6;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.assignment-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group select,
+.form-group input[type="file"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3498db;
+}
+
+.institution-footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 5%;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.quick-links a {
+  color: white;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .content-container {
+      grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header-top {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
   }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.nav-btn,
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: var(--light-color); ;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+/* Make the buttons resemble links */
+.slider-container {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative; /* Change from absolute */
+  border-radius: 10px;
 }

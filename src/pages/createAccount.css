@@ -1,0 +1,57 @@
+/* StudentLogin.css */
+
+.student-login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa;
+}
+
+.student-login-page .login-container {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.student-login-page .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.student-login-page label {
+    display: block;
+    font-weight: bold;
+}
+
+.student-login-page input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.student-login-page button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.student-login-page button:hover {
+    background-color: #3498db;
+}
+
+/* Optional: style the error message */
+.student-login-page .error-message {
+    color: #c0392b;
+    margin-bottom: 10px;
+}

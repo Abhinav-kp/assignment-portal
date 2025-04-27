@@ -1,0 +1,92 @@
+/* Profile.css */
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .avatar {
+    background: #4F46E5;
+    color: #fff;
+    font-size: 32px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .profile-course {
+    margin: 4px 0 0;
+    color: #555;
+  }
+  
+  .assignments-section h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .no-assignments {
+    color: #666;
+  }
+  
+  .assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .assignments-table th,
+  .assignments-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .assignments-table thead {
+    background: #f7f7f7;
+  }
+  
+  .assignments-table tr:nth-child(even) {
+    background: #fafafa;
+  }
+  
+  .download-link {
+    color: #4F46E5;
+    text-decoration: none;
+  }
+  
+  .download-link:hover {
+    text-decoration: underline;
+  }
+  
+  .profile-loading {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+  }
+  
