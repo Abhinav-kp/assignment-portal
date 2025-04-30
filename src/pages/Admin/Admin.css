@@ -1,0 +1,232 @@
+General Layout
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  /* Header */
+  .institution-header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .header-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .login-section .login-btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-section .login-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Navigation */
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+  
+  .main-nav li {
+    margin-right: 1rem;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .nav-btn:hover {
+    color: #007bff;
+  }
+  
+  /* Main Content */
+  .admin-main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .admin-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    flex: 1 1 45%;
+  }
+  
+  /* Announcement Form */
+  .announcement-form-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .announcement-form .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .announcement-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .input-field,
+  .textarea-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+  }
+  
+  .textarea-field {
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838;
+  }
+  
+  /* Messages */
+  .error-message {
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message {
+    color: #28a745;
+    margin-bottom: 1rem;
+  }
+  
+  /* Faculty Table */
+  .faculty-table-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .faculty-table-section {
+    overflow-x: auto;
+  }
+  
+  .faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  .faculty-table th,
+  .faculty-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .faculty-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .faculty-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .faculty-table tr:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .faculty-table td:last-child {
+    text-align: center;
+  }
+  
+  /* Footer */
+  .institution-footer {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .footer-content h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-content p {
+    margin: 0.25rem 0;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-main-content {
+      flex-direction: column;
+    }
+  
+    .card {
+      flex: 1 1 100%;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+    }
+  
+    .main-nav li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  

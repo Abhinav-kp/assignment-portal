@@ -1,14 +1,15 @@
-// src/pages/AdminLogin.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";     
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";  
+     // ← make sure this is imported
 
 const AdminLogin = () => {
   const navigate = useNavigate();
-  const [email, setEmail]           = useState("");
-  const [password, setPassword]     = useState("");
-  const [error, setError]           = useState("");
+  const [email, setEmail]       = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError]       = useState("");
 
-  // hard-coded admin credentials
   const ADMIN_EMAIL    = "admin@koshys.edu";
   const ADMIN_PASSWORD = "Admin@123";
 
@@ -16,10 +17,16 @@ const AdminLogin = () => {
     e.preventDefault();
     setError("");
 
-    // check against our hard-coded creds
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-      // successful admin login
-      navigate("/admin-dashboard");  
+      // 1️⃣ set a cookie that marks the admin as logged in
+      const auth = getAuth();
+  signInWithEmailAndPassword(auth, ADMIN_EMAIL, ADMIN_PASSWORD)
+    .then(() => {
+      // set your cookie guard if still needed
+      Cookies.set("adminLoggedIn","true");
+      navigate("/admin-dashboard");
+    })
+    .catch(err => setError(err.message));
     } else {
       setError("Invalid admin credentials.");
     }

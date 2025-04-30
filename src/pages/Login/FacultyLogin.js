@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";   // ← make sure you import your firebase config
+import { auth } from "../../firebase";   // ← make sure you import your firebase config
 import "./FacultyLogin.css";
 
 const FacultyLogin = () => {
@@ -67,11 +67,14 @@ const FacultyLogin = () => {
           </div>
 
           <button type="submit">Login</button>
-        </form>
-
-        <button className="login-btn" onClick={() => navigate("/create-faculty")}>
+          <br />
+          <br />
+          <button className="login-btns" onClick={() => navigate("/create-faculty")}>
           Create an Account
         </button>
+        </form>
+        
+        
       </div>
     </div>
   );

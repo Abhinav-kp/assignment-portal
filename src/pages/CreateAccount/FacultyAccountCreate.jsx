@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../firebase";    // ← shared singleton
+import { auth, db } from "../../firebase";    // ← shared singleton
 import "./createAccount.css";
 
 const subjectMapping = {
@@ -80,6 +80,7 @@ export default function FacultyAccountCreate() {
         semester: Number(semester),
         subject,
         createdAt: serverTimestamp(),
+        verified:false,
       });
 
       // 3) Store token

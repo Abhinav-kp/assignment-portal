@@ -117,10 +117,10 @@ const CreateAccount = () => {
               required
             >
               <option value="">Select your course</option>
-              <option value="Mathematics">BCA</option>
-              <option value="Computer Science">BBA</option>
-              <option value="Physics">BCOM</option>
-              <option value="Chemistry">BVA</option>
+              <option value="BCA">BCA</option>
+              <option value="BBA">BBA</option>
+              <option value="BCOM">BCOM</option>
+              <option value="BVA">BVA</option>
             </select>
           </div>
           <div className="input-group">

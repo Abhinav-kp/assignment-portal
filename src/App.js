@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import InstitutionPortal from './InstitutionPortal';
-import StudentLogin from './StudentLogin';
-import FacultyLogin from './FacultyLogin'
-import Dashboard from "./pages/Dashboard";
-import CreateAccount from './pages/CreateAccount';
-import Profile from './pages/Profile';
-import FacultyAccountCreate from './pages/FacultyAccountCreate';
-import AdminLogin from './pages/AdminLogin';
-
+import InstitutionPortal from './pages/InstitutionPortal/InstitutionPortal';
+import StudentLogin from './pages/Login/StudentLogin';
+import FacultyLogin from './pages/Login/FacultyLogin'
+import CreateAccount from './pages/CreateAccount/CreateAccount';
+import Profile from './pages/Profile/Profile';
+import FacultyAccountCreate from './pages/CreateAccount/FacultyAccountCreate';
+import AdminLogin from './pages/Admin/AdminLogin';
+import Admin from './pages/Admin/Admin';
+import ProtectedRoute from './protectedRoute';
+import "./App.css"
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<InstitutionPortal />} />
@@ -21,10 +23,17 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/create-account" element={<CreateAccount/>}/>
         <Route path="/create-faculty" element={<FacultyAccountCreate/>}/>
-        
-        <Route path="/dashboard" element={<Dashboard />} /> {/* ✅ After login */}
+        <Route
+         path="/admin-dashboard"
+         element={
+           <ProtectedRoute>
+             <Admin />
+           </ProtectedRoute>
+         }
+       />        
       </Routes>
     </Router>
+    </>
   );
 }
 

@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #2980b9;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+  }
+  
+  .institution-header {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  .header-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    padding-right: 540px;
+  }
+  
+  .header-text p {
+    font-size: 1.1rem;
+    color: var(--light-color);
+  }
+  
+  .login-section {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  .login-btn,
+  .profile-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover,
+  .profile-btn:hover {
+    background-color: #3498db;
+  }
+  
+  .main-nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 5%;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .main-nav .nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .main-nav .nav-btn:hover {
+    color: var(--light-color);
+  }
+  
+  .content-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+    min-height: 70vh;
+  }
+  
+  .announcements {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .announcement-card {
+    background: var(--light-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .announcement-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .date-badge {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .assignment-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .assignment-form h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .assignment-form button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .assignment-form button[type="submit"]:hover {
+    background-color: #3498db;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 1rem;
+  }
+  
+  .assignments-table {
+    grid-column: span 2;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .assignments-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .assignments-table th,
+  .assignments-table td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .assignments-table th {
+    background-color: var(--light-color);
+  }
+  
+  .assignments-table button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .assignments-table button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .institution-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem 5%;
+    margin-top: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info,
+  .quick-links {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-link-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .footer-link-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+  }
+  
